@@ -1,0 +1,43 @@
+.bigDiv {
+  width: 100%;
+  height: 90%;
+}
+.bigDiv h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 50px;
+}
+.contacts {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+}
+.contacts_box {
+  width: 500px;
+  height: 90px;
+  background-color: rgb(255, 225, 191);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 45px;
+}
+.contacts_form {
+  width: max-content;
+  height: max-content;
+}
+.contacts_form {
+  margin-bottom: 5px;
+}
+.contacts_name {
+  margin-right: 3px;
+}
+.submit {
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
