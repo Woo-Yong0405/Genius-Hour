@@ -10,6 +10,9 @@
   font-size: 50px;
   margin: 50px;
 }
+.contacts_box div:first-of-type {
+  height: 90px;
+}
 .contacts {
   display: flex;
   justify-content: center;
