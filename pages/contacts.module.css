@@ -1,6 +1,9 @@
 .bigDiv {
   width: 100%;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .bigDiv h1 {
   text-align: center;
@@ -10,6 +13,8 @@
 .contacts {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: max-content;
 }
@@ -22,6 +27,10 @@
   align-items: center;
   flex-direction: column;
   border-radius: 45px;
+  margin-bottom: 30px;
+}
+.contacts_box p {
+  font-size: 30px;
 }
 .contacts_form {
   width: max-content;
