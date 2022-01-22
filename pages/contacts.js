@@ -22,20 +22,50 @@ export default function contacts() {
                         const box = document.createElement("div")
                         box.classList.add(i.contacts_box)
                         const name = document.createElement("p")
+                        name.name = "name"
                         name.innerText = boxes[a].name + ": " + boxes[a].email
                         box.append(name)
                         container.append(box)
+                        box.addEventListener("mouseenter", (e) => {
+                            const adf = e.target
+                            if (e.target === adf) {
+                                adf.innerHTML = ""
+                            const btn1 = document.createElement("button")
+                            btn1.id = "btn1"
+                            btn1.className = i.contacts_buttons
+                            btn1.innerText = "Edit Contact"
+                            const btn2 = document.createElement("button")
+                            btn2.id = "btn1"
+                            btn2.className = i.contacts_buttons
+                            btn2.innerText = "Delete Contact"
+                            const btn3 = document.createElement("button")
+                            btn3.id = "btn1"
+                            btn3.className = i.contacts_buttons
+                            btn3.innerText = "Mail to this Email"
+                            adf.append(btn1)
+                            adf.append(btn2)
+                            adf.append(btn3)
+                            }
+                        }, true)
+                        box.addEventListener("mouseleave", (e) => {
+                            const b = document.createElement("p")
+                            b.innerText = name.innerText
+                            e.target.innerHTML = ""
+                            e.target.append(b)
+                        })
                     }
                 })
                 document.getElementById("submit").addEventListener("click", () => {
-                    const name = document.getElementById("name").value;
-                    const email = document.getElementById("email").value;
+                    const nameinput = document.getElementById("name");
+                    const emailinput = document.getElementById("email");
                     dbService.collection(`Users/${user.uid}/contacts`).add({
-                        name: name,
-                        email: email,
+                        name: nameinput.value,
+                        email: emailinput.value,
                     })
                     const asdf = document.getElementById("asdf")
                     asdf.innerHTML = ""
+                    nameinput.value = ""
+                    emailinput.value = ""
                 })
             }
         })
