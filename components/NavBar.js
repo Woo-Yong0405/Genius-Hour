@@ -4,6 +4,7 @@ import s from "../components/NavBar.module.css";
 
 export default function NavBar(prop) {
     const router = useRouter()
+    console.log(prop.isLoggedIn)
     return (
         <div className={s.bar}>
         <h2 className={s.logo}><Link href="/">MCA</Link></h2>
