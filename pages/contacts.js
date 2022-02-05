@@ -48,10 +48,12 @@ export default function contacts() {
                             const name = document.createElement("input");
                             name.type = "text"
                             name.id = "editName"
+                            form.append("Name: ")
                             form.append(name)
                             const email = document.createElement("input");
                             email.type = "email"
                             email.id = "editEmail"
+                            form.append("Email: ")
                             form.append(email)
                             const button = document.createElement("button");
                             button.id = "editConfirm"
