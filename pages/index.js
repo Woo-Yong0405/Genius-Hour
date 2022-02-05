@@ -3,13 +3,17 @@ import { useEffect } from "react";
 import { authService } from "../fb";
 import i from "../pages/home.module.css";
 
-export default function home(prop) {
-    let asdf = true;
-    useEffect((user)=>{
-        if (user) {
-            asdf = false
-        }
-    })
+export default function home() {
+    let asdf;
+    useEffect(()=>{
+        asdf = true
+        authService.onAuthStateChanged((user) => {
+            if (user.uid) {
+                asdf = true;
+            }
+        })
+        console.log(asdf)
+    }, [])
     return (
         <>
             {asdf ? (
