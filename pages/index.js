@@ -4,15 +4,9 @@ import { authService } from "../fb";
 import i from "../pages/home.module.css";
 
 export default function home(prop) {
-    let asdf = true;
-    useEffect((user)=>{
-        if (user) {
-            asdf = false
-        }
-    })
     return (
         <>
-            {asdf ? (
+            {prop.isLoggedIn ? (
                 <div className={i.n}>
                     <h1>Welcome Back!</h1>
                 </div>

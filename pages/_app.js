@@ -15,7 +15,7 @@ export default function home({Component, pageProps}) {
     return (
         <>
             <NavBar isLoggedIn={asdf} />
-            <Component {...pageProps} />
+            <Component isLoggedIn={asdf} {...pageProps} />
         </>
     )
 }
