@@ -9,7 +9,6 @@ export default function contacts() {
     useEffect(() => {
         authService.onAuthStateChanged((user) => {
             if (user) {
-                console.log(user)
                 dbService.collection(`Users/${user.uid}/contacts`).onSnapshot((querySnapshot) => {
                     let boxes = [];
                     querySnapshot.forEach((doc) => {
