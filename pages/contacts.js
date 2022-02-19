@@ -154,9 +154,7 @@ export default function contacts() {
                         })
                     }
                 })
-                document.getElementById("asdf").addEventListener("submit", (e) => {
-                    e.preventDefault()
-                    console.log("sc")
+                document.getElementById("submit").addEventListener("click", () => {
                     const name = document.getElementById("name");
                     const email = document.getElementById("email");
                     dbService.collection(`Users/${user.uid}/contacts`).add({
@@ -175,13 +173,11 @@ export default function contacts() {
         <div className={i.bigDiv}>
             <h1>Your Contacts:</h1>
                 <div className={i.contacts_box}>
-                    <form className={i.contacts_form} id="asdf">
-                        <div>
-                            <input id="name" className={i.contacts_name} type="text" placeholder="Full Name" required />
-                            <input id="email" className={i.contacts_email} type="email" placeholder="Email" required />
-                        </div>
-                        <input className={i.submit} type="submit" id="submit" value="Create Contact" />
+                    <form className={i.contacts_form}>
+                        <input id="name" className={i.contacts_name} type="text" placeholder="Full Name" required />
+                        <input id="email" className={i.contacts_email} type="email" placeholder="Email" required />
                     </form>
+                    <button className={i.submit} id="submit" >Create Contact</button>
                 </div>
             <div id="asdf" className={i.contacts}>
             </div>

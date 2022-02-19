@@ -14,11 +14,6 @@ export default function assignments() {
                     <input type="submit" className={i.submit} />
                 </form>
             </div>
-            <div className={i.assDiv}>
-                <div className={i.formDiv}>
-                
-                </div>
-            </div>
         </div>
     )
 }
