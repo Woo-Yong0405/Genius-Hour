@@ -4,11 +4,11 @@ import "../styles/globals.css";
 import {authService} from "../fb";
 
 export default function home({Component, pageProps}) {
-    let asdf = true;
+    const [asdf, setAsdf] = useState(false)
     useEffect(() => {
         authService.onAuthStateChanged((user) => {
             if (user) {
-                asdf = false;
+                setAsdf(true)
             }
         })
     })
