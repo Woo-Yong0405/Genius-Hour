@@ -4,7 +4,7 @@ import i from "./contacts.module.css";
 import { useRouter } from "next/router";
 
 
-export default function contacts() {
+export default function Contacts() {
     const router = useRouter()
     useEffect(() => {
         authService.onAuthStateChanged((user) => {

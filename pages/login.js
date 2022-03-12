@@ -3,7 +3,7 @@ import { useState } from "react";
 import i from "./login.module.css";
 import {authService, firebaseInstance} from "../fb";
 
-export default function login() {
+export default function Login() {
     const [email, setEmail] = useState("")
     const [pw, setPw] = useState("")
     const [error, setError] = useState("")

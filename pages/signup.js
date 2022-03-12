@@ -3,7 +3,7 @@ import { useState } from "react";
 import { authService } from "../fb";
 import i from "./signup.module.css";
 
-export default function home() {
+export default function Signup() {
     const [email, setEmail] = useState("")
     const [pw, setPw] = useState("")
     const [error, setError] = useState("")

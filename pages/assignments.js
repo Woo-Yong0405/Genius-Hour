@@ -3,7 +3,7 @@ import i from "./assignments.module.css"
 import {authService, dbService } from "../fb"
 import LZString from "lz-string"
 
-export default function assignments() {
+export default function Assignments() {
     const [file, setFile] = useState("")
     const onFileChange = (event) => {
         setFile(null)
