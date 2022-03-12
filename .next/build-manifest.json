@@ -30,6 +30,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/assignments": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/assignments.js"
+    ],
     "/contacts": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

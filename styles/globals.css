@@ -131,10 +131,24 @@ table {
   border-spacing: 0;
 }
 #__next {
+  top: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
 }
 html {
+  width: 100%;
+  height: 100%;
+}
+#as {
+  top: 10%;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+body {
+  top: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
 }

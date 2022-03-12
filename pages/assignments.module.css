@@ -1,12 +1,13 @@
-.bigDiv {
-    width: 100%;
-    height: 90%;
+.bigDiv,
+.assignments {
+    width: max-content;
+    height: 100%;
     display: flex;
     align-items: center;
 }
 .formDiv {
     margin-left: 40px;
-    width: 15%;
+    width: 300px;
     height: 85%;
     display: inherit;
     justify-content: center;
@@ -51,6 +52,16 @@
     outline: none;
 }
 .photo {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+}
+.photo::before {
+    visibility: visible;
+    content: "Select Photo";
     border: none;
     background-color: transparent;
     text-align: center;
@@ -58,10 +69,14 @@
     width: max-content;
     height: max-content;
     border-bottom: solid 1px black;
+    padding: none;
     padding-bottom: 3px;
     outline: none;
+    margin: auto;
 }
-.submit {
+.submit,
+.remove,
+.deleteBtn {
     width: max-content;
     padding: 10px;
     height: max-content;
@@ -70,4 +85,25 @@
     background-color: rgba(0, 0, 0, 0.3);
     font-size: 15px;
     outline: none;
+}
+.preview {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+.previewDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.images {
+    width: 200px;
+}
+.assignment * {
+    margin-bottom: 20px;
+}
+.assignment p {
+    font-size: 20px;
+    text-align: center;
 }

@@ -9,6 +9,10 @@ export default function home(prop) {
             {prop.isLoggedIn ? (
                 <div className={i.n}>
                     <h1>Welcome Back!</h1>
+                    <button className={i.asdf} onClick={() => {
+                        authService.signOut();
+                        location.reload();
+                    }}>Log Out</button>
                 </div>
             ):(
                 <div className={i.n} >

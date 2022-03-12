@@ -10,3 +10,13 @@
   font-size: 100px;
   margin-bottom: 10px;
 }
+.asdf {
+  width: max-content;
+  padding: 10px;
+  height: max-content;
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  outline: none;
+}
