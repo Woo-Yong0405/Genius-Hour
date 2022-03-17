@@ -54,6 +54,10 @@ export default function Assignments() {
                 })
             })
             const bigDiv = document.getElementById("bidDiv")
+            const asdasd = document.getElementById("assignment");
+            if (asdasd) {
+                asdasd.innerHTML = "";
+            }
             for (let a = 0; a<asdfasdf.length; a++) {
                 const littleDiv = document.createElement("div");
                 littleDiv.id = asdfasdf[a].id
@@ -158,7 +162,7 @@ export default function Assignments() {
     }, [])
     return (
         <div className={i.bigDiv} id="bidDiv">
-            <div className={i.formDiv}>
+            <div className={`${i.formDiv} ${i.cloud}`}>
                 <h1>Add an Assignment</h1>
                 <form id="form">
                     <input className={i.title} type="text" placeholder="Assignment Title" required />
