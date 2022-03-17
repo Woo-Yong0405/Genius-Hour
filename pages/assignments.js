@@ -4,20 +4,37 @@ import {authService, dbService } from "../fb"
 import LZString from "lz-string"
 
 export default function Assignments() {
-    const [file, setFile] = useState("")
+    let file = [];
     const onFileChange = (event) => {
-        setFile(null)
         const afile = event.target.files[0]
         const reader = new FileReader();
         reader.onloadend = (d) => {
             const result = d.target.result;
-            setFile(result)
+            file = [];
+            file.push(result)
+            for (let c = 0; c<file.length; c++) {
+                const asdasd = document.getElementById("asdasd");
+                const newDiv = document.createElement("div");
+                newDiv.classList.add(i.previewDiv)
+                newDiv.name = c;
+                const image = document.createElement("img");
+                image.classList.add(i.preview);
+                image.id = "a";
+                image.src = file[c];
+                newDiv.appendChild(image);
+                const button = document.createElement("button");
+                button.classList.add(i.remove);
+                button.onclick = (event) => {
+                    file.splice(event.path[1].name);
+                    event.path[1].remove();
+                }
+                button.innerText = "Remove Photo";
+                newDiv.appendChild(button);
+                asdasd.appendChild(newDiv);
+            }
         }
         reader.readAsDataURL(afile)
         console.log(afile.name)
-    }
-    const onRemove = () => {
-        setFile(null)
     }
     useEffect(() => {
         const div = document.createElement("div");
@@ -114,7 +131,29 @@ export default function Assignments() {
         })
         const asdf = document.getElementById("assignment")
         asdf.innerHTML = "";
-        setFile(null)
+        file = [];
+        const asdasd = document.getElementById("asdasd");
+        asdasd.innerHTML = "";
+        for (let c = 0; c<file.length; c++) {
+            const asdasd = document.getElementById("asdasd");
+            const newDiv = document.createElement("div");
+            newDiv.classList.add(i.previewDiv)
+            newDiv.name = c;
+            const image = document.createElement("img");
+            image.classList.add(i.preview);
+            image.id = "a";
+            image.src = file[c];
+            newDiv.appendChild(image);
+            const button = document.createElement("button");
+            button.classList.add(i.remove);
+            button.onclick = (event) => {
+                file.splice(event.path[1].name);
+                event.path[1].remove();
+            }
+            button.innerText = "Remove Photo";
+            newDiv.appendChild(button);
+            asdasd.appendChild(newDiv);
+        }
         })
     }, [])
     return (
@@ -128,7 +167,7 @@ export default function Assignments() {
                     <p>Photos: </p>
                     <input type="file" className={i.photo} accept="image/*" onChange={onFileChange} />
                     <p>Preview:</p>
-                    {file&& <div className={i.previewDiv} ><img className={i.preview} id="a" src={file} /><button className={i.remove} onClick={onRemove}>Remove Photo</button></div>}
+                    <div className={i.previewDivs} id="asdasd"></div>
                     <p>Due Date: </p>
                     <input type="date" id="date" className={i.date} />
                 </form>
