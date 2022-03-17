@@ -75,6 +75,15 @@
     outline: none;
     margin: auto;
 }
+.assignment * {
+    margin-bottom: 20px;
+    width: 80%;
+    overflow-wrap: break-word;
+}
+.assignment p {
+    font-size: 20px;
+    text-align: center;
+}
 .submit,
 .remove,
 .deleteBtn {
@@ -100,11 +109,4 @@
 }
 .images {
     width: 200px;
-}
-.assignment * {
-    margin-bottom: 20px;
-}
-.assignment p {
-    font-size: 20px;
-    text-align: center;
 }
